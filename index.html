@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textbox Calculation</title>
+</head>
+<body>
+
+    <input type="text" id="textbox1" placeholder="Enter value 1">
+    <br>
+    <input type="text" id="textbox2" placeholder="Enter value 2">
+    <br>
+    <button onclick="calculateSum()">Calculate Sum</button>
+
+    <p id="result"></p>
+
+    <script>
+        function calculateSum() {
+            // Get textbox values
+            var value1 = parseFloat(document.getElementById("textbox1").value);
+            var value2 = parseFloat(document.getElementById("textbox2").value);
+
+            // Check if values are valid numbers
+            if (!isNaN(value1) && !isNaN(value2)) {
+                // Calculate sum
+                var sum = value1 + value2;
+
+                // Display the result
+                document.getElementById("result").innerText = "Sum: " + sum;
+            } else {
+                // Display an error message if values are not valid numbers
+                document.getElementById("result").innerText = "Please enter valid numbers";
+            }
+        }
+    </script>
+
+</body>
+</html>
